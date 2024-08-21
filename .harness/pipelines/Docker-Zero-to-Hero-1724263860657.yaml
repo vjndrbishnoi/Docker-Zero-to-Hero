@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_Docker_Zero_to_Hero_1724263865477
+  name: Build Docker-Zero-to-Hero
+  orgIdentifier: default
+  projectIdentifier: Vijender_DevOPS
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: Docker-Zero-to-Hero
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
