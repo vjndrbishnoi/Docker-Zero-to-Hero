@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Docker_Zero_to_Hero_1724263865477-pr-trigger-input-set
+  identifier: Build_Docker_Zero_to_Hero_1724263865477prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Vijender_DevOPS
+  pipeline:
+    identifier: Build_Docker_Zero_to_Hero_1724263865477
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
